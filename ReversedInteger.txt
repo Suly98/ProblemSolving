@@ -1,0 +1,20 @@
+public class ReverseInteger {
+    public static int reverse(int num) {
+        int reverseInteger = 0;
+        
+        while (num != 0) {
+            int reminder = num % 10;
+            reverseInteger = reverseInteger*10 + reminder;
+            num = (num - reminder) / 10;
+        }
+        
+        return reverseInteger;
+    }    
+    public static void main(String[] args) {
+        int input = 4565;
+        int output = reverse(input);
+        System.out.println("Reversed number is: "+ output);
+        
+        
+    }
+}
