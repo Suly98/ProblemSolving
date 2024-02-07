@@ -1,0 +1,19 @@
+import java.util.Scanner;
+
+public class AvgScore{
+        public static void main(String[] args) {
+
+        Scanner scanner = new Scanner(System.in);
+
+           // Prompt user to enter three exam scores
+            System.out.print("Enter three exam scores: ");
+            int ExamOne = scanner.nextInt();
+            int ExamTwo = scanner.nextInt();
+            int ExamThree = scanner.nextInt();
+
+            
+            float avg = (float) ((ExamOne + ExamTwo + ExamThree) / 3.0 ) ;
+        
+             System.out.printf("The Average is:  %.2f%n", avg);
+        }
+}

@@ -1,0 +1,24 @@
+import java.util.Scanner;
+
+public class TemperaturInCelsius{
+        public static void main(String[] args) {
+        
+        //prompt the user
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter a Celsius Temperature to: ");
+        
+        int Cels = scanner.nextInt();
+        
+        //doing the calculations
+        float Fahr = (float) (Cels * (9/5) + 32);
+          
+
+        System.out.printf("The Fahrenheit Temperature is %.2f%n", Fahr);
+        
+        
+        
+            
+
+             
+        }
+}

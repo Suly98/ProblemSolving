@@ -1,0 +1,7 @@
+public class UserAge{
+        public static void main(String[] args) {
+            int userAge = 26;
+        
+             System.out.println("Age = "+ userAge);
+        }
+}

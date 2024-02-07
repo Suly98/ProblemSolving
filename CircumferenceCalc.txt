@@ -1,0 +1,26 @@
+import java.util.Scanner;
+
+public class CircleCircumference{
+        public static void main(String[] args) {
+        
+        //prompt the user
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter a Radius to: ");
+        
+        float rad = scanner.nextFloat();
+        final float pi = 3.14f;
+        
+        //doing the calculations
+        float circum = 2 * pi * rad;
+          
+
+        System.out.printf("The circum is %.2f%n", circum);
+        
+        
+        
+            
+
+             
+        }
+}
+

@@ -1,0 +1,29 @@
+import java.util.Scanner;
+
+public class DigitChecker{
+        public static void main(String[] args) {
+
+        Scanner scanner = new Scanner(System.in);
+
+           
+            System.out.print("Enter a Char: ");
+            
+            //We used Scanner to read character
+            char c = scanner.next().charAt(0);
+            
+            if (c >= '0' && c <= '9') {
+                boolean checker = true;
+
+                System.out.println("The character is a digit \n"+ checker);
+            } else {
+                boolean checker = false;
+
+                System.out.println("The character is not a digit \n"+ checker);
+            }
+            
+            
+            
+             
+        }
+}
+
