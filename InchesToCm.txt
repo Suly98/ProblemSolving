@@ -1,0 +1,14 @@
+import java.util.Scanner;
+
+public class InchesToCenti {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        System.out.println("Enter Inches: ");
+        float Inch = scanner.nextFloat();
+        
+        float Result = (float) (Inch * 2.54);
+        
+        System.out.printf("In Centimeters it is: %.2f%n", Result);
+    }
+}

@@ -1,0 +1,23 @@
+import java.util.Scanner;
+
+public class DistanceCalulator {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        System.out.println("What is the initial velocity in m/s? ");
+        double velocity = scanner.nextDouble();
+
+        System.out.println("What is the acceleration in m/s^2? ");
+        double acceleration = scanner.nextDouble();
+        
+        System.out.println("What is the time in seconds? ");
+        double time = scanner.nextDouble();
+        
+        double distance = velocity*time + 1.0d/2 * acceleration * time * time ;
+
+        
+        System.out.printf("The Distance Traveled by this object is %.2f%n", distance," Meters"  );
+        
+        
+    }
+}

@@ -1,24 +1,18 @@
 import java.util.Scanner;
 
-public class TemperaturInCelsius{
-        public static void main(String[] args) {
-        
-        //prompt the user
+public class CelsiusToFahrenheit {
+    public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        System.out.print("Enter a Celsius Temperature to: ");
-        
-        int Cels = scanner.nextInt();
-        
-        //doing the calculations
-        float Fahr = (float) (Cels * (9/5) + 32);
-          
 
-        System.out.printf("The Fahrenheit Temperature is %.2f%n", Fahr);
-        
-        
-        
-            
+        System.out.println("Enter a Celsius degree that you want to convert: ");
+        int celsius = scanner.nextInt();
 
-             
-        }
+        // using the integral type:
+        int fahrenheitInt = celsius * (9 / 5) + 32;
+        System.out.println("The Fahrenheit (integer) is: " + fahrenheitInt);
+
+        // using the floating-point type:
+        float fahrenheitFloat = (float) (celsius * (9.0 / 5.0) + 32);
+        System.out.printf("The Fahrenheit (floating-point) is: %.2f%n", fahrenheitFloat);
+    }
 }

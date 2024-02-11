@@ -1,0 +1,40 @@
+import java.util.Scanner;
+
+public class MedianModeMean {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        System.out.print("Enter Three numbers: ");
+        
+        int NumberONe = scanner.nextInt();
+        int NumberTwo = scanner.nextInt();
+        int NumberThree = scanner.nextInt();
+            // finding the mean number:
+        int mean = (NumberONe + NumberTwo + NumberThree) / 3;
+        
+            //finding the median number:
+        int[] median = {NumberONe, NumberTwo, NumberThree};
+        Arrays.sort(median); 
+        System.out.println("The Median is: "+ median[1]);
+        
+            //finding the mode number:
+        int maxCount = 0;
+        int mode = -1;
+        for (int i = 0; i < 3; i++) {
+            int count = 0;
+            for (int j = 0; j < 3; j++) {
+                if (median[i] == median[j]) {
+                    count++;
+                }
+            }
+            if (count > maxCount) {
+                maxCount = count;
+                mode = median[i];
+            }
+        }
+        System.out.println("The Mode is: " + mode);
+                
+                
+
+    }
+}

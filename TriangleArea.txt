@@ -1,0 +1,20 @@
+import java.util.Scanner;
+
+public class TriangleArea {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        System.out.println("Enter a Base ");
+        float Base = scanner.nextFloat();
+
+        System.out.println("Enter a Height ");
+        float Height = scanner.nextFloat();
+        
+        float Area = (1.0f/2) * Base*Height;
+        
+        System.out.printf("The Area of the Triangle is %.2f%n", Area );
+
+        
+        
+    }
+}

@@ -1,0 +1,33 @@
+import java.util.Scanner;
+
+public class CostOfPaint {
+    public static void main(String[] args) {
+        
+        //Assuming the user enters Valid inputs
+        Scanner scanner = new Scanner(System.in);
+        
+        System.out.println("What is the Length of the Room in m? ");
+        double length = scanner.nextDouble();
+
+        System.out.println("What is the breadth of the Room in m? ");
+        double breadth = scanner.nextDouble();
+        
+        System.out.println("What is the Height of the Room in m? ");
+        double height = scanner.nextDouble();
+    
+    
+        System.out.println("What is the Cost of the paint per square meter? $%");
+        double paint = scanner.nextDouble();
+
+        
+        
+        //calculating the area of 4 walls since we don't paint the ceiling and the floor! 
+        double area = 2 * (length+breadth) * height;
+        
+        double totalCost = area * paint;
+        
+        System.out.printf("The total cost of painting this room is $%.2f%n", totalCost  );
+        
+        
+    }
+}

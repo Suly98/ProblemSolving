@@ -1,0 +1,21 @@
+import java.util.Scanner;
+
+public class CostOfItems {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        System.out.println("Enter The Quantity of Items: ");
+        int quantity = scanner.nextInt();
+
+        System.out.println("What is the cost per item? ");
+        double cost = scanner.nextDouble();
+        
+        double total = cost * quantity;
+
+        
+        System.out.printf("The Total cost is: $%.2f%n", total  );
+
+        
+        
+    }
+}

@@ -1,0 +1,15 @@
+import java.util.Scanner;
+
+public class SpherVol {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        System.out.println("Enter The Radius of the Sphere: ");
+        double Rad = scanner.nextDouble();
+        final float Pi = 3.14f;
+        
+        double volume =  (4.0/3.0 * Pi * Math.pow(Rad, 3)); // or we can use Rad*Rad*Rad
+        
+        System.out.printf("The volume of the sphere is: %.2f%n", volume);
+    }
+}
