@@ -1,0 +1,139 @@
+import java.util.Scanner;
+
+public class TaskManagement {
+
+    // Variables to store the title, description, date, and priority of a task
+    private static String title, description, date;
+    private static int priority;
+
+    public static void main(String[] args) {
+        AddTask(); //Adding Task
+        ViewTasks(); //Viewing all the tasks
+        MarkCompleted(); //Mark the tasks as completed
+        TaskViewing(); //Viewing the tasks by priority or date
+        RemoveTask(); //remove a task
+
+
+
+    }
+    // Adding the addtask function with the description, priority, and the date!
+    public static void AddTask() {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("What is the Title of the Task you want to add? ");
+        title = scanner.nextLine();
+
+        System.out.println("Add a Description for the title: ");
+        description = scanner.nextLine();
+
+        System.out.println("Give it a Priority from 1 - 5: ");
+        priority = scanner.nextInt();
+        
+        //  consume the new line character.
+        scanner.nextLine();
+
+        System.out.println("Enter the Date in yyyy-mm-dd format: ");
+        date = scanner.nextLine();
+
+
+    }
+    // The code below is for keep asking the user for
+ /*  public static void RepeatTask() {
+        Scanner scanner = new Scanner(System.in);
+
+        AddTask();
+        System.out.println("Do you want to add another tasks? y/n");
+        String word = scanner.nextLine();
+        boolean statement;
+        if (word.equals("y")){
+            statement = true;
+            RepeatTask();
+        }
+        else {
+
+            System.out.println("Thank you, Your Tasks have been added!");
+            statement = false;
+        }
+
+    } */
+            //Method to View the tasks
+    public static void ViewTasks() {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Do you want to show the tasks? y/n");
+        String tasks = scanner.nextLine();
+        if (tasks.equals("y")) {
+            System.out.println("The Title is: " + title);
+            System.out.println("The Description is: " + description);
+            System.out.println("Priority: " + priority);
+            System.out.println("The Date is: " + date);
+        }
+        else {
+            System.out.println("Thanks!");
+        }
+
+    }
+    //  Method to mark the task as completed
+    public static void MarkCompleted() {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Did You finish the Task? y/n");
+        String TaskCompleted = scanner.nextLine();
+        if (TaskCompleted.equals("y")) {
+            System.out.println("Your Task is Completed Successfully! ");
+        }
+        else {
+            System.out.println("Your Task is not Completed yet! ");
+        }
+
+    }
+    // Method to remove the task
+    public static void RemoveTask() {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Do You Wish to Remove the Task? y/n");
+        String TaskRemoving = scanner.nextLine();
+
+        if (TaskRemoving.equals("y")) {
+            title = String.valueOf(' ');
+            description = String.valueOf(' ');
+            date = String.valueOf(' ');
+            priority = 0;
+            System.out.println("The Task has been Removed Successfully!");
+        }
+
+    }
+    // Method to view the task by priority or date
+    public static void TaskViewing() {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Would you like to view the Task by Priority or Date? ");
+        String TaskViewing = scanner.nextLine();
+
+        if (TaskViewing.equalsIgnoreCase("Priority")){
+            System.out.println("Task Viewed by Priority: " + priority);
+            System.out.println("The Title is: " + title);
+            System.out.println("The Description is: " + description);
+            System.out.println("The Date is: " + date);
+
+        }
+        else if (TaskViewing.equalsIgnoreCase("Date")) {
+            System.out.println("Task is Viewed by Date : " + date);
+
+            System.out.println("The Title is: " + title);
+            System.out.println("The Description is: " + description);
+            System.out.println("Priority: " + priority);
+        }
+
+        else {
+            System.out.println("Wrong Input!!");
+        }
+    }
+
+
+}
+
+
+
+
+
