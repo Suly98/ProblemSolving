@@ -1,23 +1,26 @@
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class MedianModeMean {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        
+
         System.out.print("Enter Three numbers: ");
-        
+
         int NumberONe = scanner.nextInt();
         int NumberTwo = scanner.nextInt();
         int NumberThree = scanner.nextInt();
-            // finding the mean number:
+        // finding the mean number:
         int mean = (NumberONe + NumberTwo + NumberThree) / 3;
-        
-            //finding the median number:
+
+        System.out.println("The mean number is: "+ mean);
+
+        //finding the median number:
         int[] median = {NumberONe, NumberTwo, NumberThree};
-        Arrays.sort(median); 
+        Arrays.sort(median);
         System.out.println("The Median is: "+ median[1]);
-        
-            //finding the mode number:
+
+        //finding the mode number ( This code that I need to recheck it and understand it because it was copied)
         int maxCount = 0;
         int mode = -1;
         for (int i = 0; i < 3; i++) {
@@ -33,8 +36,8 @@ public class MedianModeMean {
             }
         }
         System.out.println("The Mode is: " + mode);
-                
-                
+
+
 
     }
 }
