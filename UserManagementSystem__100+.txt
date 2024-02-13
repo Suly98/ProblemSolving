@@ -1,0 +1,109 @@
+import java.util.Scanner;
+
+public class UserManagementSystem {
+    private static String username, password, role;
+
+    public static void main(String[] args){
+        Scanner scanner = new Scanner(System.in);
+        addUser(scanner);
+        viewUsers(scanner);
+        updateUsersInfo(scanner);
+        removeUser(scanner);
+        userSearch(scanner);
+        usersRoleView(scanner);
+    }
+        // Adding user
+    public static void addUser(Scanner scanner) {
+        System.out.println("What is the user name you want to create? ");
+        username = scanner.nextLine();
+
+        System.out.println("Write is the password you will create? ");
+        password = scanner.nextLine();
+
+        System.out.println("What is your Role? (Admin, Moderator, user) ");
+        role = scanner.nextLine();
+    }
+        // Viewing user
+    public static void viewUsers(Scanner scanner){
+        System.out.println("Do you want to view the users?");
+        String viewUser = scanner.nextLine();
+
+        if (viewUser.equalsIgnoreCase("y")) {
+            System.out.println("The Username is: "+ username);
+            System.out.println("The Password is: "+ password);
+            System.out.println("The Role of this user is : "+ role);
+        }
+        else {
+            System.out.println("Nothing to View here");
+        }
+    }
+        // Updating Users info
+    public static void updateUsersInfo(Scanner scanner){
+        System.out.println("Do you want to update the users info? y/n");
+        String update = scanner.nextLine();
+
+        if (update.equalsIgnoreCase("y")) {
+            System.out.println("What is the updated username? ");
+            username = scanner.nextLine();
+
+            System.out.println("What is the updated password? ");
+            password = scanner.nextLine();
+
+            System.out.println("Finally, Write the role model of the user: ");
+            role = scanner.nextLine();
+        }
+        else {
+            System.out.println("Nothing to Change here!");
+        }
+    }
+        // Removing users
+    public static void removeUser(Scanner scanner ){
+        System.out.println("Would you like to remove users?");
+        String remove = scanner.nextLine();
+
+        if (remove.equalsIgnoreCase("y")) {
+            System.out.println("What users you want to Remove? ");
+            String userRemove = scanner.nextLine();
+
+            if (userRemove.equalsIgnoreCase(username)) {
+                System.out.println("The username"+ username+ " has been removed successfully");
+                username = "";
+                password = "";
+                role = "";
+            }
+            else {
+                System.out.println("Wrong input!");
+            }
+        }
+        else {
+            System.out.println("Nothing to Change here!");
+        }
+    }
+        // Search for user by username
+    public static void userSearch(Scanner scanner){
+        System.out.println("What is the username you want to search for? ");
+        String user = scanner.nextLine();
+        if (user.equalsIgnoreCase(username)) {
+            System.out.println("The Password is of user "+ username+" is "+ password);
+            System.out.println("The Role of user "+username+" is : "+ role);
+        }
+        else {
+            System.out.println("Nothing to Print here ");
+        }
+    }
+        // View users by Role
+    public static void usersRoleView(Scanner scanner){
+        System.out.println("What is the Role Model you want to look for? ");
+        String roleModel = scanner.nextLine();
+
+        if (roleModel.equalsIgnoreCase(role)) {
+            System.out.println("The Username of the role "+role+" is : "+ username);
+            System.out.println("The Password of the "+ role+" is "+ password);
+        }
+    }
+}
+
+
+
+
+
