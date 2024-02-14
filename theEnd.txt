@@ -1,0 +1,30 @@
+import java.util.Scanner;
+
+public class test {
+    public static void main(String[] args) {
+        Scanner printer = new Scanner(System.in);
+
+        System.out.print("Enter a string from : ");
+        String string1 = printer.nextLine();
+
+        System.out.print("Enter True/False: ");
+        Boolean num = printer.nextBoolean();
+
+        if (string1.isEmpty()) {
+            System.out.print("The input is Empty!");
+        }
+
+        if (num.equals(true) ) {
+
+            System.out.println(string1.charAt(0));
+        }
+        else if (num.equals(false)) {
+            System.out.println(string1.charAt(string1.length() -1));
+        }
+
+        else {
+            System.out.println("Wrong Input");
+
+        }
+    }
+}
