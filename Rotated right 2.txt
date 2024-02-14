@@ -1,0 +1,16 @@
+import java.util.Scanner;
+
+public class test {
+    public static void main(String[] args) {
+        Scanner printer = new Scanner(System.in);
+
+        System.out.print("Enter the first string: ");
+        String string1 = printer.nextLine();
+
+//        System.out.print("Enter the second string: ");
+//        String string2 = printer.nextLine();
+
+        System.out.print(string1.substring(string1.length() -2)+ string1.substring(0,string1.length()-2));
+
+    }
+}
