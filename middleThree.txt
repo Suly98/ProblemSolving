@@ -1,0 +1,26 @@
+import java.util.Scanner;
+
+public class test {
+    public static void main(String[] args) {
+        Scanner printer = new Scanner(System.in);
+
+        System.out.print("Enter an odd string from : ");
+        String string1 = printer.nextLine();
+//        int num = string1.length() % 2  ? num : string1;
+
+//        System.out.print("Enter an index: ");
+//        Integer num = printer.nextInt();
+        Integer length = string1.length();
+
+        if (length%2 != 0 ) {
+            System.out.println(string1.substring((length)/2 - 1, (length)/2+2));
+        }
+        else {
+            System.out.println(string1);
+
+        }
+
+
+
+    }
+}

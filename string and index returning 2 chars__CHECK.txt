@@ -1,0 +1,26 @@
+import java.util.Scanner;
+
+public class test {
+    public static void main(String[] args) {
+        Scanner printer = new Scanner(System.in);
+
+        System.out.print("Enter the first string: ");
+        String string1 = printer.nextLine();
+
+        System.out.print("Enter an index: ");
+        Integer num = printer.nextInt();
+
+        int startIndex = Math.max(0, num);
+        int endIndex = Math.min(startIndex + 2, string1.length());
+
+        if (num >=  ) {
+
+        }
+        else {
+            System.out.print(string1.substring(startIndex, endIndex ));
+        }
+
+
+
+    }
+}
