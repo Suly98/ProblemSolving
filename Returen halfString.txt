@@ -1,0 +1,13 @@
+import java.util.Scanner;
+
+public class test {
+    public static void main(String[] args ) {
+        Scanner printer = new Scanner(System.in);
+        System.out.println("Enter a String: ");
+        String string1 = printer.nextLine();
+
+
+        String string2 = string1.substring(0,string1.length()/2);
+        System.out.println(string2);
+    }
+}

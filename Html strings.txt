@@ -1,0 +1,14 @@
+import java.util.Scanner;
+
+public class test {
+    public static void main(String[] args ) {
+        Scanner printer = new Scanner(System.in);
+        System.out.println("Enter a String: ");
+        String string1 = printer.nextLine();
+
+        System.out.println("Enter another String: ");
+        String string2 = printer.nextLine();
+
+        System.out.println("<"+string1+"> " + string2 + " </"+string1+ ">");
+    }
+}
