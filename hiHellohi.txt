@@ -1,0 +1,23 @@
+import java.util.Scanner;
+
+public class test {
+    public static void main(String[] args) {
+        Scanner printer = new Scanner(System.in);
+
+        System.out.print("Enter the first string: ");
+        String string1 = printer.nextLine();
+
+        System.out.print("Enter the second string: ");
+        String string2 = printer.nextLine();
+
+        int str1 = string1.length();
+        int str2 = string2.length();
+        
+        if (str1 < str2) {
+            System.out.println(string1 + string2 + string1);
+        }
+        else if (str1 > str2) {
+            System.out.println(string2 + string1 + string2);
+        }
+    }
+}
