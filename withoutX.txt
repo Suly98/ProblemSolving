@@ -1,0 +1,23 @@
+import java.util.Scanner;
+
+public class test {
+    public static void main(String[] args) {
+        Scanner printer = new Scanner(System.in);
+
+        System.out.print("Enter a string : ");
+        String string1 = printer.nextLine();
+        Integer num = string1.length()-1;
+        char str1 = string1.charAt(0);
+        char str2 = string1.charAt(num);
+
+
+        if (str1 == 'x' || str2 == 'x'){
+
+            String stringNoX = string1.replace("x", "");
+            System.out.println(stringNoX);
+        }
+        else {
+            System.out.println("Wrong Input");
+        }
+    }
+}
