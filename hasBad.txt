@@ -1,0 +1,38 @@
+import java.util.Scanner;
+
+public class test {
+    public static void main(String[] args) {
+        Scanner printer = new Scanner(System.in);
+
+        System.out.print("Enter a string : ");
+        String string1 = printer.nextLine();
+        Boolean count;
+        if (string1.length()>= 4 ) {
+            String word = string1.substring(0, 4);
+            if (word.contains("bad")) {
+                count=true;
+                System.out.println(count);
+            }
+            else{
+                count=false;
+                System.out.println(count);
+            }
+
+        }
+        else if (string1.length() == 3){
+            String word = string1.substring(0, 3);
+            if (word.equals("bad")) {
+                count = true;
+                System.out.println(count);
+            }
+            else {
+                count = false;
+                System.out.println(count);
+            }
+        }
+        else {
+            count = false;
+            System.out.println(count);
+        }
+    }
+}
