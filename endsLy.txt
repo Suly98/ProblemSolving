@@ -1,0 +1,23 @@
+import java.util.Scanner;
+
+public class test {
+    public static void main(String[] args) {
+        Scanner printer = new Scanner(System.in);
+
+        System.out.print("Enter a string from : ");
+        String string1 = printer.nextLine();
+        Boolean ly;
+        Integer num = string1.length()-2;
+
+        String word = string1.substring(num);
+
+        if (word.equalsIgnoreCase("ly")) {
+            ly = true;
+            System.out.println(ly);
+        }
+        else {
+            ly = false;
+            System.out.println(ly);
+        }
+    }
+}
