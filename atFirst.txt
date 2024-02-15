@@ -1,0 +1,16 @@
+import java.util.Scanner;
+
+public class test {
+    public static void main(String[] args) {
+        Scanner printer = new Scanner(System.in);
+
+        System.out.print("Enter a string : ");
+        String string1 = printer.nextLine();
+        if (string1.length()>=2) {
+            System.out.println(string1.substring(0,2));
+        }
+        else{
+            System.out.println(string1+"@");
+        }
+    }
+}
