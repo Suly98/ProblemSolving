@@ -1,0 +1,26 @@
+import java.util.Scanner;
+
+public class test {
+    public static void main(String[] args) {
+        Scanner printer = new Scanner(System.in);
+
+        System.out.print("Enter a string : ");
+        String string1 = printer.nextLine();
+
+
+        char str1 = string1.charAt(0);
+        char str2 = string1.charAt(1);
+
+        if (str1 != 'a' && str2 != 'b') {
+            System.out.println(string1.substring(2));
+        }
+        else if (str1 == 'a' && str2 != 'b') {
+            System.out.println(str1+string1.substring(2));
+        }
+        else if (str1!= 'a' && str2 =='b') {
+            System.out.println(str2+string1.substring(2));
+        }
+
+
+    }
+}
