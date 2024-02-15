@@ -1,0 +1,28 @@
+import java.util.Scanner;
+
+public class test {
+    public static void main(String[] args) {
+        Scanner printer = new Scanner(System.in);
+
+        System.out.print("Enter a string : ");
+        String string1 = printer.nextLine();
+
+        System.out.print("Enter another string : ");
+        String string2 = printer.nextLine();
+
+        if (string1.length()>=1 && string2.length()>=1) {
+            System.out.println(string1.substring(0,1)+string2.charAt(string2.length()-1));
+        }
+        else if (string1.length()<1 || string2.length()<1) {
+            if (string1.length()<1){
+                System.out.println("@"+string2.charAt(string2.length()-1));
+            }
+            if (string2.length()<1) {
+                System.out.println(string1.substring(0,1)+"@");
+            }
+        }
+        else {
+            System.out.println("wrong output");
+        }
+    }
+}
