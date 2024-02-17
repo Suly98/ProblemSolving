@@ -1,0 +1,30 @@
+
+import java.util.Scanner;
+
+public class test {
+    public static void main(String[] args) {
+        Scanner printer = new Scanner(System.in);
+
+        System.out.print("Enter a string : ");
+        String string1 = printer.nextLine();
+        Integer string1Len = string1.length();
+
+        if (string1Len > 3) {
+            if (string1.substring(0,3).equals("red")) {
+
+                System.out.println("Red");
+            } else if (string1.substring(0,4).equals("blue")) {
+                System.out.println("Blue");
+            } else {
+                System.out.println("");
+
+            }
+
+        } else if (string1Len == 3) {
+            System.out.println("Red2");
+        }
+        else {
+        System.out.println("Wrong input!");
+        }
+    }
+}
