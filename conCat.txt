@@ -1,0 +1,32 @@
+import com.sun.source.util.SourcePositions;
+
+import java.sql.SQLOutput;
+import java.util.Scanner;
+
+public class test {
+    public static void main(String[] args) {
+        Scanner printer = new Scanner(System.in);
+
+        System.out.print("Enter a string : ");
+        String string1 = printer.nextLine();
+        Integer str1Len = string1.length();
+
+        System.out.print("Enter a string : ");
+        String string2 = printer.nextLine();
+
+        if(string1.isEmpty()) {
+            System.out.println(string2);
+        } else if (string2.isEmpty()) {
+            System.out.println(string1);
+        } else if (!(string2.isEmpty() && string1.isEmpty())) {
+            if(string1.charAt(str1Len-1) == (string2.charAt(0))){
+                String printString = string1 + string2.substring(1);
+                System.out.println(printString);
+            } else {
+                System.out.println(string1 + string2);
+            }
+
+
+        }
+    }
+}
