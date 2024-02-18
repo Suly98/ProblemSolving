@@ -1,0 +1,22 @@
+
+public class test {
+    public static void main(String[] args) {
+//        Scanner printer = new Scanner(System.in);
+
+        int[] arr = {1,2,3,4,5};
+        int[] arr2 = {1,2};
+        Boolean condition;
+
+        if (arr.length>1 && arr2.length>1) {
+            if (arr[0]==arr2[0] || arr[arr.length-1] == arr2[arr2.length-1]) {
+                    condition=true;
+            } else {
+                condition=false;
+            }
+
+        }else {
+            condition=false;
+        }
+        System.out.println(condition);
+    }
+}
