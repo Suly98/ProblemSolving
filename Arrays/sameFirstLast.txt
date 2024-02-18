@@ -1,0 +1,23 @@
+public class test {
+    public static void main(String[] args) {
+//        Scanner printer = new Scanner(System.in);
+
+        int[] arr = {1};
+        Boolean cond;
+
+        if (arr.length >1) {
+
+            if (arr[0] ==  arr[arr.length-1]) {
+                cond = true;
+                System.out.println(cond);
+            } else {
+                cond = false;
+                System.out.println(cond);
+            }
+        } else {
+            cond = false;
+            System.out.println(cond);
+        }
+
+    }
+}
