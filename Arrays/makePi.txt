@@ -1,0 +1,9 @@
+public class test {
+    public static void main(String[] args) {
+//        Scanner printer = new Scanner(System.in);
+
+        int[] piArray ={3,1,4};
+
+        System.out.println(Arrays.toString(piArray));
+    }
+}
