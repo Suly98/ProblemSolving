@@ -21,7 +21,7 @@ public class test {
             }
 
         } else if (string1Len == 3) {
-            System.out.println("Red2");
+            System.out.println("Red");
         }
         else {
         System.out.println("Wrong input!");

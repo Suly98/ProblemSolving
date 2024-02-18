@@ -1,0 +1,22 @@
+
+import java.util.Scanner;
+
+public class test {
+    public static void main(String[] args) {
+        Scanner printer = new Scanner(System.in);
+
+        System.out.print("Enter a string : ");
+        String string1 = printer.nextLine();
+        Integer string1Len = string1.length();
+
+        char char1 = string1.charAt(0);
+        char char2 = string1.charAt(1);
+
+        if (string1Len>2) {
+            System.out.println(string1.substring(0,string1Len-2) + string1.charAt(string1Len-1) + string1.charAt(string1Len-2));
+        }
+        else {
+            System.out.println(String.valueOf(char2) + String.valueOf(char1));
+        }
+    }
+}
