@@ -1,0 +1,19 @@
+
+public class test {
+    public static void main(String[] args) {
+
+        int[] arr = {1,2,3,4};
+
+        int[] copyarr = Arrays.copyOf(arr,2);
+        int sum = 0;
+        if (arr.length > 0) {
+            for (int number: copyarr){
+                sum = sum + number;
+            }
+            System.out.println(sum);
+        }
+        else {
+            System.out.println(0);
+        }
+    }
+}
