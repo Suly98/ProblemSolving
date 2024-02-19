@@ -1,0 +1,13 @@
+public class test {
+    public static void main(String[] args) {
+
+
+        int[] arr = {1,2,3};
+
+        int[] arr1 = {arr[1], arr[2], arr[0]};
+
+        for (int x: arr1){
+            System.out.println(x);
+        }
+    }
+}
