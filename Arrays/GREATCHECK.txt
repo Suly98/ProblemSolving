@@ -1,0 +1,18 @@
+public class test {
+    public static void main(String[] args) {
+//        Scanner printer = new Scanner(System.in);
+
+        int[] arr = {5,7,9};
+
+//        int[] arr1 = {arr[2], arr[1], arr[0]};
+        int count = 0;
+        int max = 0;
+
+        for (int x: arr){
+            Float num = (float) (x/2 + 0.5);
+            count = (int) (count+num);
+
+            System.out.println(count);
+        }
+    }
+}
