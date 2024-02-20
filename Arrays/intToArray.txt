@@ -1,0 +1,35 @@
+
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class test {
+    public static void main(String[] args) {
+        Scanner printer = new Scanner(System.in);
+
+        // first given Array:
+        System.out.print("Enter a numbers that you want in an Array: ");
+        int num = printer.nextInt();
+
+        // creating int Array
+        int length = String.valueOf(num).length();
+        int[] arr = new int[length];
+        for (int i = length - 1; i >= 0; i--) {
+            arr[i] = num % 10;
+            num = num / 10;
+        }
+
+        //Second given Array:
+        System.out.print("Enter a numbers that you want in a second Array: ");
+        int num2 = printer.nextInt();
+
+        // Creating int Array:
+        int length2 = String.valueOf(num2).length();
+        int[] arr2 = new int[length2];
+
+        for (int i = length2-1; i>=0 ; i--) {
+            arr2[i] = num2%10;
+            num2 = num2/10;
+        }
+
+    }
+}
