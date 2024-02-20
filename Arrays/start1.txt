@@ -1,0 +1,45 @@
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class test {
+    public static void main(String[] args) {
+        Scanner printer = new Scanner(System.in);
+
+        // Ask the user for a given Array1:
+        System.out.print("Enter two numbers that you want in an Array: ");
+        int num = printer.nextInt();
+
+        // creating int Array1
+        int length = String.valueOf(num).length(); // knowing the length of the new string given
+        int[] arr = new int[length];    // issuing a new array that has the same length of the given string
+        for (int i = length - 1; i >= 0; i--) { // for i in the length range, (big to small), i is bigger or equal to zero, i is incremented every loop
+            arr[i] = num % 10; // Adding the last numbers of the given string to the last element in the array
+            num = num / 10; // deleting the last numbers of the given string and continuing the process!
+        }
+
+        // Ask the user for a given Array2:
+        System.out.print("Enter other numbers that you want in a second Array: ");
+        int num2 = printer.nextInt();
+
+        // Creating int Array2:
+        int length2 = String.valueOf(num2).length(); // The same thing that we did above but for different array!
+        int[] arr2 = new int[length2];
+        for (int i = length2 - 1; i >= 0; i--) {
+            arr2[i] = num2 % 10;
+            num2 = num2 / 10;
+        }
+        int count = 0;
+        for (int x : arr) {
+            if (x == 1) {
+                count++;
+            }
+        }
+        for (int x : arr2) {
+            if (x == 1) {
+                count++;
+            }
+        }
+        System.out.println(count);
+
+    }
+}
