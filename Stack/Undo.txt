@@ -1,0 +1,46 @@
+import java.util.Arrays;
+import java.util.Stack;
+import java.util.Scanner;
+
+class test {
+    public static Stack<Integer> myStack = new Stack<>();
+    public static Scanner scanner = new Scanner(System.in);
+
+    public static void main(String[] args) {
+
+        pushInt(5, 6, 11);
+        undo();
+
+    }
+
+    public static void pushInt(int num1, int num2, int num3) {
+        myStack.push(num1);
+        myStack.push(num2);
+        myStack.push(num3);
+        System.out.println("The full stack is: " + myStack.toString());
+
+    }
+
+    public static void undo() {
+        boolean cond = true;
+        Stack<String> myStack = new Stack<>();
+
+        while (cond) {
+            System.out.println("Write a character: ");
+            String chr = scanner.nextLine();
+
+            if (chr.equals("undo")) {
+                cond = false;
+            } else {
+                myStack.push(chr);
+            }
+
+
+        }
+        myStack.pop();
+        System.out.println(myStack.toString());
+    }
+
+
+
+}
