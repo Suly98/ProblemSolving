@@ -1,0 +1,51 @@
+import java.util.Arrays;
+import java.util.Stack;
+
+class test {
+    public static Stack<Integer> myStack = new Stack<>();
+
+    public static void main(String[] args) {
+
+        pushInt(5, 6, 11);
+        count();
+
+    }
+
+    public static void pushInt(int num1, int num2, int num3) {
+        myStack.push(num1);
+        myStack.push(num2);
+        myStack.push(num3);
+        System.out.println("The full stack is: " + myStack.toString());
+
+    }
+
+    public static void removeInt() {
+        System.out.println("The removed element is: " + myStack.pop());
+
+        System.out.println("The remaining stack is: " + myStack.toString());
+
+    }
+
+    public static void isEmpty() {
+        //Added a new stack and check if it is empty
+
+        Stack<String> stringStack = new Stack<>();
+        if (stringStack.isEmpty()) {
+            System.out.println("the condition is " + stringStack.isEmpty() + " and stringStack is empty");
+        } else {
+            System.out.println("stringStack is not Empty");
+        }
+
+        // checks if the unEmpty stack if it empty or not
+        if (myStack.isEmpty()) {
+            System.out.println(myStack.isEmpty());
+        } else {
+            System.out.println("myStack is not empty");
+        }
+    }
+
+    public static void count() {
+        System.out.println("The number of element in the stack is: " + myStack.size());
+    }
+
+}
