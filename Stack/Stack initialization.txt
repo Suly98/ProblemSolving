@@ -1,0 +1,17 @@
+import java.util.Stack;
+
+class test{
+    public static void main(String[] args){
+        Stack<Integer> myStack = new Stack<>();
+        myStack.add(1);
+        myStack.add(2);
+        myStack.add(3);
+        myStack.add(4);
+        myStack.add(5);
+        myStack.add(6);
+        myStack.add(7);
+        myStack.add(8);
+        myStack.add(9);
+        myStack.add(10);
+    }
+}
