@@ -1,0 +1,15 @@
+import java.util.Stack;
+
+class test{
+    public static void main(String[] args){
+        pushInt(5,6,11);
+    }
+
+    public static void pushInt(int num1, int num2, int num3 ){
+        Stack<Integer> myStack = new Stack<>();
+        myStack.push(num1);
+        myStack.push(num2);
+        myStack.push(num3);
+        System.out.println(myStack.toString());
+    }
+}
