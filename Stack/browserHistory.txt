@@ -1,0 +1,42 @@
+import java.util.Arrays;
+import java.util.Stack;
+import java.util.Scanner;
+
+class test {
+    public static Stack<String> browserStack = new Stack<>();
+    public static Scanner scanner = new Scanner(System.in);
+
+    public static void main(String[] args) {
+        browserSearch();
+    }
+
+    public static void browserSearch() {
+        Boolean cond = true;
+        while (cond) {
+            System.out.println("Please Enter Browser URLs (hit f when done): ");
+            String str = scanner.nextLine();
+            browserStack.add(str);
+
+            if (str.equalsIgnoreCase("f")) {
+                cond = false;
+                browserStack.pop();
+            }
+        }
+
+        while (!browserStack.isEmpty()) {
+            System.out.println("Do you wish to go back? y/n");
+            String ans = scanner.nextLine();
+
+            if (ans.equalsIgnoreCase("y")) {
+                System.out.println(browserStack.pop());
+
+            } else if (ans.equalsIgnoreCase("n")) {
+                System.out.println("you are in " + browserStack.lastElement() + " Page.");
+                break;
+
+            } else {
+                System.out.println("Please enter y/n");
+            }
+        }
+    }
+}
