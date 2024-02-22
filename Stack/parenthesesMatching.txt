@@ -1,3 +1,4 @@
+import java.util.Arrays;
 import java.util.Stack;
 import java.util.Scanner;
 
@@ -9,7 +10,7 @@ class test {
         addNum();
     }
     public static void addNum() {
-        System.out.println("give me a balanced parentheses: ");
+        System.out.println("give me a balanced parentheses without spaces ");
         String str = scanner.nextLine();
         Stack<String> openParentheses = new Stack<>();
         Stack<String> closeParentheses = new Stack<>();
