@@ -1,0 +1,47 @@
+import java.util.Arrays;
+import java.util.Stack;
+import java.util.Scanner;
+
+class test {
+    public static Stack<String> myStack = new Stack<>();
+    public static Scanner scanner = new Scanner(System.in);
+
+    public static void main(String[] args) {
+        addNum();
+    }
+    public static void addNum() {
+        System.out.println("give me a balanced parentheses: ");
+        String str = scanner.nextLine();
+        Stack<String> openParentheses = new Stack<>();
+        Stack<String> closeParentheses = new Stack<>();
+
+        for(Character x: str.toCharArray()){
+            myStack.add(x.toString());
+        }
+//        System.out.println(myStack.toString());
+
+
+        if (myStack.size()%2 != 0){
+            System.out.println("The String does not have balanced parentheses! ");
+        } else {
+            for (String x: myStack){
+                if (x.equals(("("))){
+                    openParentheses.push(x);
+//                    System.out.println(openParentheses.toString());
+
+                } else if (x.equals(")")) {
+                    closeParentheses.push(x);
+//                    System.out.println(closeParentheses.toString());
+                }
+            }
+
+            if (openParentheses.size() == closeParentheses.size()){
+                System.out.println("The String is balanced! ");
+            } else {
+                System.out.println("The string is not balanced! ");
+            }
+        }
+    }
+
+
+}
