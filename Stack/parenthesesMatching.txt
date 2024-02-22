@@ -1,4 +1,3 @@
-import java.util.Arrays;
 import java.util.Stack;
 import java.util.Scanner;
 
@@ -18,18 +17,16 @@ class test {
         for(Character x: str.toCharArray()){
             myStack.add(x.toString());
         }
-//        System.out.println(myStack.toString());
-
 
         if (myStack.size()%2 != 0){
             System.out.println("The String does not have balanced parentheses! ");
         } else {
             for (String x: myStack){
-                if (x.equals(("("))){
+                if (x.equals(("(")) || x.equals("{") || x.equals("[")){
                     openParentheses.push(x);
 //                    System.out.println(openParentheses.toString());
 
-                } else if (x.equals(")")) {
+                } else if (x.equals((")")) || x.equals("}") || x.equals("]")) {
                     closeParentheses.push(x);
 //                    System.out.println(closeParentheses.toString());
                 }
@@ -42,6 +39,4 @@ class test {
             }
         }
     }
-
-
 }
