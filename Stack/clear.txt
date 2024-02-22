@@ -1,0 +1,33 @@
+import java.util.Arrays;
+import java.util.Stack;
+import java.util.Scanner;
+
+class test {
+    public static Stack<Integer> myStack = new Stack<>();
+    public static Scanner scanner = new Scanner(System.in);
+
+    public static void main(String[] args) {
+        addNum();
+        clear();
+    }
+    public static void addNum() {
+        System.out.println("Write the numbers that you would want to reverse: ");
+        String str = scanner.nextLine();
+
+        for (int i = 1 ; i <= str.length(); i++) {
+            myStack.add(i);
+        }
+    }
+
+    public static void clear(){
+        System.out.println("Do you wish to clear the stack? y/n");
+        String ans = scanner.nextLine();
+
+        if (ans.equalsIgnoreCase("y")){
+            myStack.clear();
+            System.out.println(myStack);
+        } else {
+            System.out.println("The stack is not cleared: "+ myStack.toString());
+        }
+    }
+}
