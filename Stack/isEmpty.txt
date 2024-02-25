@@ -1,18 +1,17 @@
-import java.util.Arrays;
 import java.util.Stack;
 
-class test {
+class Test {
     public static Stack<Integer> myStack = new Stack<>();
 
     public static void main(String[] args) {
 
-        pushInt(5, 6, 11);
-        removeInt();
+        pushIntegers(5, 6, 11);
+        removeIntegers();
         isEmpty();
 
     }
 
-    public static void pushInt(int num1, int num2, int num3) {
+    public static void pushIntegers(int num1, int num2, int num3) {
         myStack.push(num1);
         myStack.push(num2);
         myStack.push(num3);
@@ -20,7 +19,7 @@ class test {
 
     }
 
-    public static void removeInt() {
+    public static void removeIntegers() {
         System.out.println("The removed element is: " + myStack.pop());
 
         System.out.println("The remaining stack is: " + myStack.toString());
@@ -32,7 +31,7 @@ class test {
 
         Stack<String> stringStack = new Stack<>();
         if (stringStack.isEmpty()) {
-            System.out.println("the condition is " + stringStack.isEmpty() + " and stringStack is empty");
+            System.out.println("The stringStack is empty.");
         } else {
             System.out.println("stringStack is not Empty");
         }
@@ -41,7 +40,7 @@ class test {
         if (myStack.isEmpty()) {
             System.out.println(myStack.isEmpty());
         } else {
-            System.out.println("myStack is not empty");
+            System.out.println("myStack is not empty.");
         }
 
     }
