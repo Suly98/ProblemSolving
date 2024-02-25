@@ -29,6 +29,9 @@ class test {
 
             if (ans.equalsIgnoreCase("y")) {
                 System.out.println(browserStack.pop());
+                if (browserStack.empty()) {
+                    System.out.println("You are in Home page!");
+                }
 
             } else if (ans.equalsIgnoreCase("n")) {
                 System.out.println("you are in " + browserStack.lastElement() + " Page.");
@@ -40,3 +43,4 @@ class test {
         }
     }
 }
+t 
