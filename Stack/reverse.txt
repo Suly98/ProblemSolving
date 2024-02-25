@@ -1,7 +1,7 @@
 import java.util.Stack;
 import java.util.Scanner;
 
-class Test {
+class Reverse{
     public static Stack<String> myStack = new Stack<>();
     public static Scanner scanner = new Scanner(System.in);
 
