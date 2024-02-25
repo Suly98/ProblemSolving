@@ -1,8 +1,7 @@
-import java.util.Arrays;
 import java.util.Stack;
 import java.util.Scanner;
 
-class test {
+class Test {
     public static Stack<String> myStack = new Stack<>();
     public static Scanner scanner = new Scanner(System.in);
 
@@ -10,34 +9,25 @@ class test {
         addNum();
     }
     public static void addNum() {
-        System.out.println("give me a balanced parentheses without spaces ");
+        System.out.println("Enter a string of balanced parentheses without spaces:");
         String str = scanner.nextLine();
-        Stack<String> openParentheses = new Stack<>();
-        Stack<String> closeParentheses = new Stack<>();
+        Stack<Character> parenthesesStack = new Stack<>();
 
-        for(Character x: str.toCharArray()){
-            myStack.add(x.toString());
-        }
-
-        if (myStack.size()%2 != 0){
-            System.out.println("The String does not have balanced parentheses! ");
-        } else {
-            for (String x: myStack){
-                if (x.equals(("(")) || x.equals("{") || x.equals("[")){
-                    openParentheses.push(x);
-//                    System.out.println(openParentheses.toString());
-
-                } else if (x.equals((")")) || x.equals("}") || x.equals("]")) {
-                    closeParentheses.push(x);
-//                    System.out.println(closeParentheses.toString());
-                }
-            }
-
-            if (openParentheses.size() == closeParentheses.size()){
-                System.out.println("The String is balanced! ");
+        for (char ch : str.toCharArray()) {
+            if (ch == '(' || ch == '{' || ch == '[') {
+                parenthesesStack.push(ch);
+            } else if (!parenthesesStack.isEmpty() &&
+                    ((ch == ')' && parenthesesStack.peek() == '(') ||
+                            (ch == '}' && parenthesesStack.peek() == '{') ||
+                            (ch == ']' && parenthesesStack.peek() == '['))) {
+                parenthesesStack.pop();
             } else {
-                System.out.println("The string is not balanced! ");
+                System.out.println("The string is not balanced.");
+                return;
             }
         }
+
+        System.out.println(parenthesesStack.isEmpty() ? "The string is balanced." : "The string is not balanced.");
     }
 }
+
