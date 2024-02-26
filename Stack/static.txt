@@ -1,0 +1,73 @@
+
+import java.util.Stack;
+import java.util.Scanner;
+
+class StackOverFlow {
+    public static Scanner scanner = new Scanner(System.in);
+    public static Stack<String> myStack = new Stack<>();
+
+    public static void main(String[] args) {
+        stackOverFlow();
+
+
+
+
+    }
+
+    public static void pushIntegers() {
+        System.out.println("Write Real numbers that you want to be in the Stack! ");
+        String stackNumbers = scanner.nextLine();
+
+
+        for (Character x : stackNumbers.toCharArray()) {
+            int index = stackNumbers.indexOf(x);
+            if (index <=9) {
+                try {
+                    myStack.add(String.valueOf(x));
+                    System.out.println("My stack is" + myStack.toString());
+                    if (myStack.size() == 10) {
+                        throw new StackOverflowError();
+                    }
+
+                } catch (StackOverflowError e) {
+                    System.out.println(e);
+                    break;
+                }
+            }
+
+        }
+
+    }
+    public static void stackOverFlow(){
+        stackOverFlow();
+    }
+    public static void removeInteger() {
+        System.out.println("Do you want to remove any elements? y/n");
+        String remove = scanner.nextLine();
+
+        while (!remove.equalsIgnoreCase("y") && !remove.equalsIgnoreCase("n")) {
+            System.out.println("Please enter a valid input! " + "Do you want to remove any elements? y/n");
+            remove = scanner.nextLine();
+
+        }
+
+        int count = 1;
+        if (remove.equalsIgnoreCase("y")) {
+            System.out.println("How many elements do you want to remove? ");
+            Integer removeElements = scanner.nextInt();
+
+            while (count <= removeElements) {
+                myStack.pop();
+                count++;
+            }
+            System.out.println("The stack after Removing the elements is: " + myStack.toString());
+
+        } else {
+            System.out.println("No Elements Removed");
+            System.out.println("The remaining stack is: " + myStack.toString());
+
+        }
+
+
+    }
+}
