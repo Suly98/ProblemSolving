@@ -10,7 +10,7 @@ class CloneSet {
         HashSet<Integer> numberSetCopy = (HashSet<Integer>) numberSet.clone();
 
 
-        numberSetCopy.remove(1);
+        numberSetCopy.add(7);
 
         System.out.println("The original set is: " + numberSet);
         System.out.println("The copied set is: " + numberSetCopy);
