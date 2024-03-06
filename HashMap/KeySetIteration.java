@@ -68,7 +68,7 @@ class KeySetIteration {
 
     public static void iterateKeySet(Map<String, Integer> numberMap) {
         for (String x : numberMap.keySet()) {
-            System.out.println(x + "," + numberMap.get(x));
+            System.out.println("Key = "+ x + ", value is: " + numberMap.get(x));
         }
     }
 
