@@ -7,8 +7,8 @@ public class Fabonacci {
         int max = scanner.nextInt();
 
         System.out.println("Fibonacci of this series is: ");
-        for (int i = 0; i < max; i++) {
-            System.out.println(fibonacci(i + 1) + " ");
+        for (int i = 0; i <= max; i++) {
+            System.out.print(fibonacci(i + 1) + " ");
         }
 
     }
